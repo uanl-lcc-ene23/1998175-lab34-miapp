@@ -1,24 +1,15 @@
-let usuarioTXT = document.getElementById("Usuario");
-let passwordTXT = document.getElementById("Contraseña");
-let p = document.getElementById("mensaje");
+let montoTXT = document.getElementById("monto");
+let gastoTXT = document.getElementById("gasto");
+let gastos = [];
+let mostrarArreglo = document.getElementById("mostrarArreglo");
 
-function imprimirsesion(){
-    console.log(usuarioTXT.value);
-    p.innerHTML = "Login correcto, " + usuarioTXT.value;
-}
+function guardar(){
+    let nuevoGasto = gastoTXT.value + ": $" + montoTXT.value;
+    gastos.push(nuevoGasto); // push agrega elementos al arreglo
 
-function imprimirRegistro(){
-    console.log(usuarioTXT.value);
-    p.innerHTML = "Registro correcto, " + usuarioTXT.value;
-}
+    // mostrar en consola
+    console.log(gastos);
 
-function limpiar(){
-   usuarioTXT.value = ""; 
-   passwordTXT.value="";
-   p.innerHTML = "";
-}
-
-function togglePsw(){
-    passwordTXT.attributes = Text;
-    alert(passwordTXT.value);
+    // mostrar en pantalla
+    mostrarArreglo.innerHTML = gastos;
 }
