@@ -1,0 +1,22 @@
+body {
+    background-color: #9be8ee5d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+    border: none;
+    background-color: #0e0608;
+    color: #00ffff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 700px){
+    button {
+    width: 25%
+    }
+}

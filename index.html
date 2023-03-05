@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Práctica 3: Inicio de sesión y registro</h1>
+    <div class="container"> 
+        <div>
+        <label for="Usuario">Usuario: </label> 
+        <input type="text" id="Usuario">
+        </div>   
+
+        <div>
+        <label for="Contraseña">Contraseña: </label>
+        <input type="password" id="Contraseña"> <span id="verPsw" onclick="togglePsw()">Ver contraseña</span>
+        </div>
+  
+        <div class="fila botones">
+            <button onclick="imprimirsesion()">Iniciar Sesión</button>
+            <button onclick="imprimirRegistro()">Registro</button>
+            <button onclick="limpiar()">Limpiar Datos</button> 
+        </div>
+
+        <p id="mensaje"></p>
+    </div>
+    
+</body>
+<script src="funciones.js"></script>
+</html>
