@@ -1,5 +1,5 @@
 body {
-    background-color: #9be8ee5d;
+    background-color: #ffd700;
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
 }
@@ -8,7 +8,7 @@ button {
     display: block;
     margin-top: 10px;
     border: none;
-    background-color: #0e0608;
+    background-color: #dc143c;
     color: #00ffff;
     padding: 15px;
     border-radius: 10px;
@@ -20,6 +20,7 @@ button {
     width: 25%
     }
 }
+
 
 .container {
     width: 80%;

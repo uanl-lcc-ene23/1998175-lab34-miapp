@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica 4</title>
+    <title>Práctica 5</title>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -15,31 +15,59 @@
 
 <body>
     <ion-app>
+      <ion-menu content-id="pagina-principal" type="reveal">
         <ion-header>
           <ion-toolbar>
+            <ion-title>Menú presupuesto</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content class="ion-padding">
+          <ion-list>
+            <ion-list-header>
+              Navegación
+            </ion-list-header>
+
+            <ion-menu-toggle>
+              <ion-item button>
+                <ion-icon name="home-outline"></ion-icon>
+                  Regresar
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+
+      <div class="ion-page" id="pagina-principal">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button fill="clear"></ion-menu-button>
+            </ion-buttons>
             <ion-title>Presupuesto</ion-title>
           </ion-toolbar>
         </ion-header>
-      
 
         <ion-content class="ion-padding">   
-            <div class="fila">
-                <ion-label for="gasto" position="floating">Tipo de Gasto: </ion-label>
-                <ion-input type="text" id="gasto" placeholder="Laptop"></ion-input>
-            </div>
-            
           <div class="fila">
-            <ion-label position="floating">Monto:</ion-label>
-            <ion-input type="number" id="monto" placeholder="$1000"></ion-input>
-          </div>  
-
-          <div>
-            <ion-button class="fila" onclick="guardar()">Guardar</ion-button>
+              <ion-label for="gasto" position="floating">Tipo de Gasto: </ion-label>
+              <ion-input type="text" id="gasto" placeholder="Laptop"></ion-input>
           </div>
+          
+        <div class="fila">
+          <ion-label position="floating">Monto:</ion-label>
+          <ion-input type="number" id="monto" placeholder="$1000"></ion-input>
+        </div>  
 
-          <p id="mostrarArreglo"></p>
+        <div>
+          <ion-button class="fila" onclick="guardar()">Guardar</ion-button>
+        </div>
 
-        </ion-content>
+        <p id="mostrarArreglo"></p>
+
+      </ion-content>
+      </div>
+        
       </ion-app>
 </body>
 
