@@ -1,5 +1,5 @@
 :root {
-    --naranja : #00ff73;
+    --naranja : #ff5400;
     --rosa: #ffe5ec;
     --blanco: #FFF;
 }
@@ -57,11 +57,11 @@ button {
 input, ion-input {
     background: #eeeeee;
     border: none;
-    padding: 12px;
+    padding: 11px;
 }
 
 input, label {
-    font-size: 20px;
+    font-size: 21px;
 }
 
 #verPsw {
