@@ -14,7 +14,7 @@ export class ListaAlumnosComponent implements OnInit{
   ngOnInit(): void {
   }
   nombre = "Francisco";
-  alumnos : any = ["Beto", "carlos", "Daniela", "eby", "alejandra", "daniel"];
+  alumnos : any = ["Beto", "Carlos", "Daniela", "eby", "Alejandra", "Daniel"];
   
   mostrarMensaje(){
     alert("hola. mundo")
