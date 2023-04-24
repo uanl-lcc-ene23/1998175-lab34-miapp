@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <link rel="stylesheet" href="estilos.css"> 
+</head>
+
+<body>
+    <ion-app>
+        <ion-menu content-id="contenido-principal" type="push">
+          <ion-header>
+            <ion-toolbar>
+              <ion-title> menu</ion-title>
+            </ion-toolbar>
+          </ion-header>
+    
+          <ion-content class="ion-padding">
+            <ion-list>
+              <ion-list-header>
+                principal
+              </ion-list-header>
+    
+              <ion-menu-toggle> 
+                <ion-item button>
+                  <ion-icon name="home"></ion-icon>
+                   inicio
+                </ion-item>
+    
+            </ion-menu-toggle>
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+        
+        <div class="ion-page" id="contenido-principal">
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start"> 
+                <ion-menu-button></ion-menu-button> 
+              </ion-buttons>
+    
+              <ion-title>Presupuesto</ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            
+            
+            <div class="fila">
+              <ion-label for="gasto">Tipo de Gasto:</ion-label>
+              <ion-input type="text" id="gasto"></ion-input>
+            </div>
+            
+            
+            <div class="fila">
+              <ion-label>Monto:</ion-label>
+              <ion-input type="text" id="monto"></ion-input>
+            </div>
+            
+            <div class="fila">
+              <ion-button onclick="guardar()">Guardar</ion-button>
+            </div>
+            
+            <ion-list id="miLista"></ion-list>
+    
+            <p id="mostrarArreglo"></p>
+          </ion-content>
+        </div>
+        
+      </ion-app>
+</body>
+
+<script src="imprimir.js"></script>
+
+</html>
