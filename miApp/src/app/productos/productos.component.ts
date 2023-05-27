@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsultasService } from '../consultas.service';
+import { ProductosService } from '../productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -8,14 +8,39 @@ import { ConsultasService } from '../consultas.service';
 })
 export class ProductosComponent implements OnInit{
 
-  constructor(private consultas: ConsultasService){ }
+  constructor(private productosConsulta: ProductosService) { }
 
-  ngOnInit(): void {
-    this.ObtenerProductos();
+  categoria = document.getElementById("categoria");
+  productos: any = [];
+
+  ngOnInit(): void{
+    this.obtenerProductos();
+    this.obtenerCategorias();
+    this.obtenerPorCategoria();
+    this.obtenerPorID();
   }
 
-  ObtenerProductos(){
-    this.consultas.getProductos().subscribe(res =>{
+  obtenerProductos(){
+    this.productosConsulta.getProductos().subscribe(res => {
+      this.productos = res;
+      console.log(res)
+    })
+  }
+
+  obtenerCategorias(){
+    this.productosConsulta.getCategorias().subscribe(res => {
+      console.log(res);
+    })
+  }
+
+  obtenerPorCategoria(){
+    this.productosConsulta.getCategoria().subscribe(res => {
+      console.log(res);
+    })
+  }
+  
+  obtenerPorID(){
+    this.productosConsulta.getProducto().subscribe( res => {
       console.log(res);
     })
   }

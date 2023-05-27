@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -8,40 +7,41 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['./lista-alumnos.component.css']
 })
 export class ListaAlumnosComponent implements OnInit{
-  
-  constructor(private actionSheetCtrl: ActionSheetController){ }
+
+  constructor(private actionSheetCtrl: ActionSheetController) {}
 
   ngOnInit(): void {
+    
   }
-  nombre = "Francisco";
-  alumnos : any = ["Beto", "Carlos", "Daniela", "eby", "Alejandra", "Daniel"];
-  
-  mostrarMensaje(){
-    alert("hola. mundo")
-  }
-  
-  async presentActionSheet() {
+
+  nombre: string = "Juan"; //var string
+
+  alumnos: any = ["Carlos", "Kevin", "Myriam", "Eduardo", "Fernanda", "Georgina", "Ivan"];
+
+  async presentarActionSheet(){
     const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Eliminar alumno',
-      subHeader: 'Elimina al alumno de la lista',
+      header: 'Eliminar',
       buttons: [
         {
           text: 'Eliminar',
           role: 'destructive',
-          data: {
-            action: 'delete',
+          data:{
+            action: 'delete'
           },
         },
         {
           text: 'Cancelar',
           role: 'cancel',
           data: {
-            action: 'cancel',
+            action: 'cancel'
           },
         },
       ],
-    }); 
-    
-    await actionSheet.present();
+    });
+
+    await actionSheet.present()
+
+    const result = await actionSheet.onDidDismiss();
+
   }
 }

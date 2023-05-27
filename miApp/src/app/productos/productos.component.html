@@ -1,16 +1,30 @@
+<p>productos works!</p>
+
 <ion-list>
     <ion-item>
-      <ion-select aria-label="categoria" interface="popover" placeholder="Selecciona una categoria">
-        <ion-select-option *ngFor="let categoria of categorias" value={{categoria}} (ionChange)="filtrarProductosCategorias($event)">{{categoria}}</ion-select-option>
+      <ion-select id="categoria" interface="popover" placeholder="Selecciona una categoria">
+        <ion-select-option value="electronics">Electronics</ion-select-option>
+        <ion-select-option value="jewelery">Jewelery</ion-select-option>
+        <ion-select-option value="men's clothing">Men's Clothing</ion-select-option>
+        <ion-select-option value="women's clothing">Women's Clothing</ion-select-option>
       </ion-select>
     </ion-item>
-  
-  </ion-list>
-  <ion-card *ngFor="let producto of productos">
-    <img alt="Silhouette of mountains" src="{{producto.image}}" />
+</ion-list>
+
+<ion-button>Filtrar</ion-button>
+
+<!-- Hacer que la wea se concatene en el TS y se haga la wea con el boton mandando un parametro y etc -->
+
+<ion-card *ngFor="let producto of productos" [routerLink]="['/producto', producto.id]">
     <ion-card-header>
+    
+      <img alt="Silhouette of mountains" src="{{producto.image}}" />  
       <ion-card-title>{{producto.title}}</ion-card-title>
-      <ion-card-subtitle>${{producto.price}}</ion-card-subtitle>
+      <ion-card-subtitle>{{producto.price}}</ion-card-subtitle>
     </ion-card-header>
-    <ion-card-content>{{producto.description}}</ion-card-content>
-  </ion-card>
+  
+    <ion-card-content>
+      {{producto.description}}
+    </ion-card-content>
+</ion-card>
+
