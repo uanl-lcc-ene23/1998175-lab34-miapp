@@ -10,6 +10,8 @@ export class HomePage {
 
   constructor(private foto:FotoService) {}
 
+  fotoS = this.foto.photo
+
   tomarFoto(){
     this.foto.addNewToGallery();
   }
